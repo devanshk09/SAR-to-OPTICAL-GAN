@@ -1,6 +1,6 @@
 # SAR to Optical Image Translation using Pix2Pix GAN
 
-A deep learning application that translates grayscale Synthetic Aperture Radar (SAR) images into colorized optical-style images using a Pix2Pix Generative Adversarial Network. The project includes a trained model, a Flask REST API backend, and a React frontend.
+A deep learning application that translates grayscale Synthetic Aperture Radar (SAR) images into optical-style images using a Pix2Pix Generative Adversarial Network. The project includes a trained model, a Flask REST API backend, and a React frontend.
 
 ---
 
