@@ -10,6 +10,7 @@ import torch.nn as nn
 import numpy as np
 from PIL import Image
 import io
+import os
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for React frontend
@@ -117,7 +118,8 @@ class UnetGenerator(nn.Module):
 # Load model
 print("Loading model...")
 generator = UnetGenerator(c_in=3, c_out=3).to(device)
-generator.load_state_dict(torch.load('../pix2pix_gen_265.pth', map_location=device))
+MODEL_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'pix2pix_gen_265.pth')
+generator.load_state_dict(torch.load(MODEL_PATH, map_location=device))
 generator.eval()
 print("✓ Model loaded successfully!")
 
